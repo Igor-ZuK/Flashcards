@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+body {
+    background: url("../img/world.png") no-repeat;
+    background-size: cover;
+}
+
+.title {
+    color: #505050;
+    font-family: 'Arial', sans-serif;;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.quiz-area {
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 5px;
+    transition: transform 1.5s linear;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.front {
+    background: bisque;
+    color: orange;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: orange;
+    color: bisque;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.cards {
+    perspective: 1000px;
+}
